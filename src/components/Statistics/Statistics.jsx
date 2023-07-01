@@ -9,11 +9,10 @@ import {
   SecondSpan,
 } from './Statistics.stuled';
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <StatisticsContainer>
-      <Title>Upload stats</Title>
-
+      {title && <Title>{title}</Title>}
       <List>
         {stats.map(({ id, label, percentage }) => {
           return (
